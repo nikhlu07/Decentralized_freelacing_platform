@@ -154,7 +154,7 @@ This project leverages several powerful technologies:
 8. Review submitted work and approve milestones
 9. Release payments for completed milestones
 10. Provide rating and review upon project completion
-
+![Decentralized Freelance Marketplace1](/images/free2.png)
 ### Freelancer Journey
 1. Connect Metamask wallet and create detailed profile
 2. Complete skill verification process
@@ -328,6 +328,7 @@ yarn start
 # Hardhat provides 20 test accounts with 10000 ETH each
 # Import the private keys from the console output into Metamask
 ```
+![Decentralized Freelance Marketplace3](/images/free3.png)
 
 8. Setup CometChat (required for messaging functionality)
 - Create a CometChat account at https://www.cometchat.com
