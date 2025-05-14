@@ -1,4 +1,91 @@
-# Decentralized Freelance Marketplace
+## System Architecture
+
+### High-Level Architecture
+
+The decentralized freelance marketplace is built on a layered architecture that combines blockchain technology with traditional web technologies to create a hybrid decentralized application (dApp).
+
+```
+┌───────────────────────────────────────────────────────────────────────┐
+│                         CLIENT LAYER                                  │
+│                                                                       │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │  React UI   │  │   Redux     │  │  Web3 Modal │  │  CometChat  │   │
+│  │  Components │  │   Store     │  │  Connector  │  │  Interface  │   │
+│  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘   │
+│             │            │               │                │           │
+└─────────────┼────────────┼───────────────┼────────────────┼───────────┘
+              │            │               │                │
+┌─────────────┼────────────┼───────────────┼────────────────┼───────────┐
+│                       MIDDLEWARE LAYER                                │
+│                                                                       │
+│  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐   │
+│  │  API        │  │  Ethers.js  │  │  IPFS       │  │  CometChat  │   │
+│  │  Service    │  │  Provider   │  │  Client     │  │  SDK        │   │
+│  └─────────────┘  └─────────────┘  └─────────────┘  └─────────────┘   │
+│             │            │               │                │           │
+└─────────────┼────────────┼───────────────┼────────────────┼───────────┘
+              │            │               │                │
+┌─────────────┼────────────┼───────────────┼────────────────┼───────────┐
+│                       BACKEND LAYER                                   │
+│                                                                       │
+│  ┌─────────────────────────┐        ┌───────────────────────────┐     │
+│  │     Blockchain Node     │        │    Centralized Services   │     │
+│  │                         │        │                           │     │
+│  │  ┌─────────────────┐    │        │  ┌─────────────────────┐  │     │
+│  │  │ Smart Contracts │    │        │  │ CometChat Backend   │  │     │
+│  │  │                 │    │        │  │                     │  │     │
+│  │  │ ┌─────────────┐ │    │        │  └─────────────────────┘  │     │
+│  │  │ │Marketplace  │ │    │        │                           │     │
+│  │  │ └─────────────┘ │    │        │  ┌─────────────────────┐  │     │
+│  │  │ ┌─────────────┐ │    │        │  │ IPFS Gateway        │  │     │
+│  │  │ │Escrow       │ │    │        │  │                     │  │     │
+│  │  │ └─────────────┘ │    │        │  └─────────────────────┘  │     │
+│  │  │ ┌─────────────┐ │    │        │                           │     │
+│  │  │ │Dispute      │ │    │        │  ┌─────────────────────┐  │     │
+│  │  │ └─────────────┘ │    │        │  │ Optional Backend    │  │     │
+│  │  │ ┌─────────────┐ │    │        │  │ Services (Express)  │  │     │
+│  │  │ │Reputation   │ │    │        │  │                     │  │     │
+│  │  │ └─────────────┘ │    │        │  └─────────────────────┘  │     │
+│  │  └─────────────────┘    │        │                           │     │
+│  └─────────────────────────┘        └───────────────────────────┘     │
+│                                                                       │
+└───────────────────────────────────────────────────────────────────────┘
+```
+
+### Smart Contract Architecture
+
+```
+┌───────────────────────────────────────────────────────────────────────────────┐
+│                        SMART CONTRACT ARCHITECTURE                            │
+│                                                                               │
+│  ┌───────────────────────────┐         ┌───────────────────────────────────┐  │
+│  │                           │         │                                   │  │
+│  │   FreelanceMarketplace    │◄────────┤           UserProfiles           │  │
+│  │   - createProject()       │         │   - createProfile()              │  │
+│  │   - placeBid()            │         │   - updateProfile()              │  │
+│  │   - acceptBid()           │         │   - getProfile()                 │  │
+│  │   - completeProject()     │         │   - verifySkill()                │  │
+│  │                           │         │                                   │  │
+│  └───────────┬───────────────┘         └───────────────┬───────────────────┘  │
+│              │                                         │                      │
+│              │                                         │                      │
+│              ▼                                         ▼                      │
+│  ┌───────────────────────────┐         ┌───────────────────────────────────┐  │
+│  │                           │         │                                   │  │
+│  │      EscrowService        │         │         ReputationSystem         │  │
+│  │   - depositFunds()        │         │   - rateUser()                   │  │
+│  │   - releaseFunds()        │         │   - getUserRating()              │  │
+│  │   - refundClient()        │◄───┐    │   - verifyRating()               │  │
+│  │   - getCurrentBalance()   │    │    │                                   │  │
+│  │                           │    │    └───────────────┬───────────────────┘  │
+│  └───────────┬───────────────┘    │                    │                      │
+│              │                    │                    │                      │
+│              │                    │                    │                      │
+│              ▼                    │                    ▼                      │
+│  ┌───────────────────────────┐    │    ┌───────────────────────────────────┐  │
+│  │                           │    │    │                                   │  │
+│  │    DisputeResolution      │    └────┤         TokenRewards             │  │
+│  │   - openDispute()         │         │   - mintReputationTokens()       │  # Decentralized Freelance Marketplace
 
 A blockchain-based platform that connects freelancers and clients in a trustless environment, eliminating the need for intermediaries while ensuring secure transactions and communication.
 
@@ -292,3 +379,4 @@ Several optimizations have been implemented to ensure optimal performance:
 - **Service Workers**: Offline functionality and resource caching
 - **GraphQL Integration**: Efficient data fetching with minimal overhead
 - **CDN Deployment**: Static assets served from distributed network
+
