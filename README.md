@@ -1,3 +1,4 @@
+```
 Decentralized Freelance Marketplace
 A blockchain-based platform that connects freelancers and clients in a trustless environment, eliminating the need for intermediaries while ensuring secure transactions and communication.
 Project Inspiration
@@ -49,7 +50,7 @@ API Integration: RESTful APIs for non-blockchain functionality
 Optimization: Code splitting and lazy loading for better performance
 Smart Contract Security: Implemented OpenZeppelin security standards
 Responsive Design: Mobile-first approach for all device compatibility
-```
+
 ┌───────────────────────────────────────────────────────────────────────┐
 │                         CLIENT LAYER                                  │
 │                                                                       │
