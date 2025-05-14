@@ -1,9 +1,54 @@
+Decentralized Freelance Marketplace
+A blockchain-based platform that connects freelancers and clients in a trustless environment, eliminating the need for intermediaries while ensuring secure transactions and communication.
+Project Inspiration
+This project was inspired by the work of @Daltonic and his tutorial on decentralized applications. While drawing inspiration from his approach, I've expanded the functionality and implemented my own vision for a comprehensive freelance marketplace on the blockchain
 ## System Architecture
 
 ### High-Level Architecture
 
 The decentralized freelance marketplace is built on a layered architecture that combines blockchain technology with traditional web technologies to create a hybrid decentralized application (dApp).
 
+Features
+
+Smart Contract-Based Agreements: Secure, immutable contracts between freelancers and clients
+Decentralized Escrow System: Funds are held in escrow until work is completed and approved
+Blockchain Verification: All transactions and agreements are recorded on the blockchain
+Integrated Chat System: Built-in communication system powered by CometChat
+Metamask Integration: Simple and secure wallet connection for transactions
+Project Creation & Bidding: Clients can post projects and freelancers can place bids
+Milestone-Based Payments: Break down projects into manageable milestones with individual payments
+Rating & Review System: Transparent feedback mechanism for accountability
+Dispute Resolution Mechanism: Built-in arbitration system for resolving payment disagreements
+Customizable Freelancer Profiles: Showcase skills, experience, and portfolio on the blockchain
+Automated Contract Enforcement: Smart contracts execute payment terms automatically upon completion
+Skill Verification System: Blockchain-based skill validation for freelancers
+Advanced Search & Filtering: Find the right talent or projects with powerful search tools
+Contract Templates: Pre-built contract templates for common freelance arrangements
+Activity Tracking Dashboard: Monitor project progress, deadlines, and milestones
+Notification System: Real-time alerts for bids, messages, and project updates
+Multi-currency Support: Accept payments in various cryptocurrencies
+Reputation Token System: Earn tokens based on successful project completions
+Decentralized Identity Verification: Optional KYC verification for enhanced trust
+
+Technology Stack
+This project leverages several powerful technologies:
+
+Frontend: React.js with Tailwind CSS for responsive design
+Smart Contracts: Solidity for writing reliable and secure contracts
+Blockchain Interaction: Ethers.js for seamless web3 integration
+Development Environment: Hardhat for local blockchain development and testing
+Wallet Integration: Metamask for secure transactions
+Communication: CometChat for real-time messaging between parties
+Network Access: Infura for connecting to the Ethereum network
+Testing: Chai for comprehensive contract testing
+State Management: Redux for efficient application state handling
+UI Components: Custom component library for consistent design language
+Data Storage: IPFS for decentralized storage of project files and deliverables
+Authentication: JWT-based authentication combined with wallet signatures
+API Integration: RESTful APIs for non-blockchain functionality
+Optimization: Code splitting and lazy loading for better performance
+Smart Contract Security: Implemented OpenZeppelin security standards
+Responsive Design: Mobile-first approach for all device compatibility
 ```
 ┌───────────────────────────────────────────────────────────────────────┐
 │                         CLIENT LAYER                                  │
