@@ -6,7 +6,7 @@
 
 Inspired by [@Daltonic](https://github.com/Daltonic)'s dApp tutorial, this project expands into a full-featured freelance marketplace with integrated escrow, arbitration, and real-time messaging.
 
-![Decentralized Freelance Marketplace](https://via.placeholder.com/800x400?text=Decentralized+Freelance+Marketplace)
+![Decentralized Freelance Marketplace](/images/free1.png)
 
 ## ✨ Features
 
