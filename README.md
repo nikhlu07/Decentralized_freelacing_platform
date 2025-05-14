@@ -198,25 +198,11 @@ The integrated CometChat system provides:
 ## 📸 Screenshots
 
 ### Project Marketplace
-![Project Marketplace](https://via.placeholder.com/600x300?text=Project+Marketplace)
+![Project Marketplace](/images/job1.png)
 
 ### Placing Bids
-![Placing Bids](https://via.placeholder.com/600x300?text=Placing+Bids)
+![Placing Bids](/images/job2.png)
 
-### Payment Processing
-![Payment Processing](https://via.placeholder.com/600x300?text=Payment+Processing)
-
-### One-on-One Chat
-![One-on-One Chat](https://via.placeholder.com/600x300?text=One-on-One+Chat)
-
-### Freelancer Profile
-![Freelancer Profile](https://via.placeholder.com/600x300?text=Freelancer+Profile)
-
-### Dispute Resolution Interface
-![Dispute Resolution](https://via.placeholder.com/600x300?text=Dispute+Resolution)
-
-### Analytics Dashboard
-![Analytics Dashboard](https://via.placeholder.com/600x300?text=Analytics+Dashboard)
 
 ## 📝 Smart Contract Architecture
 
