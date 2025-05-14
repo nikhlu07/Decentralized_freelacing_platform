@@ -1,9 +1,17 @@
 ```
-Decentralized Freelance Marketplace
-A blockchain-based platform that connects freelancers and clients in a trustless environment, eliminating the need for intermediaries while ensuring secure transactions and communication.
-Project Inspiration
-This project was inspired by the work of @Daltonic and his tutorial on decentralized applications. While drawing inspiration from his approach, I've expanded the functionality and implemented my own vision for a comprehensive freelance marketplace on the blockchain
-## System Architecture
+# Decentralized Freelance Marketplace
+
+> A blockchain-powered platform connecting freelancers and clients in a **trustless**, **secure**, and **intermediary-free** environment.
+
+---
+
+## 🚀 Project Inspiration
+
+Inspired by [@Daltonic](https://github.com/Daltonic)’s dApp tutorial, this project expands into a full-featured freelance marketplace with integrated escrow, arbitration, and real-time messaging.
+
+---
+
+## 🏗️ System Architecture
 
 ### High-Level Architecture
 
